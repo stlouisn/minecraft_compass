@@ -22,15 +22,9 @@ public class Compass {
         return new ResourceLocation(MOD_ID, name);
     }
 
-    // ITEM REGISTRATION ->
-
     public static final ResourceLocation ANCIENT_COMPASS_NAME = res("ancient_compass");
         public static final Supplier<Item> ANCIENT_COMPASS_ITEM = RegHelper.registerItem(ANCIENT_COMPASS_NAME, () ->
             new AncientCompassItem(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).setNoRepair()));
-
-    // ITEM REGISTRATION <-
-
-    // CREATIVE MENU REGISTRATION ->
 
     public Compass() {
         RegHelper.addItemsToTabsRegistration(Compass::addCreativeTabItems);
@@ -42,7 +36,5 @@ public class Compass {
                 ANCIENT_COMPASS_ITEM.get());
 
     }
-
-    // CREATIVE MENU REGISTRATION <-
 
 }
