@@ -1,6 +1,8 @@
 plugins {
     id "dev.architectury.loom" version "${architectury_loom_version}"
     id "maven-publish"
+    id 'eclipse'
+    id 'idea'
 }
 
 version = project.mod_version
@@ -21,10 +23,10 @@ loom {
     forge {
 
 //        mixinConfigs = [
-//                mod_id + ".mixins.json"
+//            mod_id + ".mixins.json"
 //        ]
-//
-//        mixin.defaultRefmapName.set(mod_id+".refmap.json")
+
+//        mixin.defaultRefmapName.set(mod_id + ".refmap.json")
 
     }
 }
@@ -36,6 +38,7 @@ repositories {
     }
 
     maven {
+        name = 'Curse Maven'
         url = "https://www.cursemaven.com"
         allowInsecureProtocol = true
         content {
@@ -53,13 +56,14 @@ dependencies {
 
     forge "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
 
+    annotationProcessor("net.fabricmc:sponge-mixin:${project.mixin_version}")
+
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${project.mixin_extras_version}"))
     implementation(include("io.github.llamalad7:mixinextras-forge:${project.mixin_extras_version}"))
 
-    annotationProcessor("net.fabricmc:sponge-mixin:${project.mixin_version}")
+    modImplementation("curse.maven:${project.moonlight_project_id}:${project.moonlight_forge_version}")
 
     modImplementation("curse.maven:${project.jei_project_id}:${project.jei_forge_version}")
-    modImplementation("curse.maven:${project.moonlight_project_id}:${project.moonlight_forge_version}")
 
     implementation("org.jetbrains:annotations:${project.jetbrains_version}")
 
@@ -112,8 +116,8 @@ jar {
     manifest {
         attributes([
                 "Specification-Title"     : project.mod_id,
-                "Specification-Vendor"    : project.mod_authors,
                 "Specification-Version"   : "1",
+                "Specification-Vendor"    : project.mod_authors,
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : version,
                 "Implementation-Vendor"   : project.mod_authors,
