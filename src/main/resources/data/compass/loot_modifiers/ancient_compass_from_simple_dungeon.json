@@ -1,0 +1,17 @@
+{
+  "type": "moonlight:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/simple_dungeon"
+    },
+    {
+      "chance": 0.07,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": {
+    "id": "compass:ancient_compass",
+    "Count": 1
+  }
+}
