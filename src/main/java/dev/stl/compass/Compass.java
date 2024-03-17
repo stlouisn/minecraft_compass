@@ -23,8 +23,8 @@ public class Compass {
     }
 
     public static final ResourceLocation ANCIENT_COMPASS_NAME = res("ancient_compass");
-        public static final Supplier<Item> ANCIENT_COMPASS_ITEM = RegHelper.registerItem(ANCIENT_COMPASS_NAME, () ->
-            new AncientCompassItem(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).setNoRepair()));
+    public static final Supplier<Item> ANCIENT_COMPASS_ITEM = RegHelper.registerItem(ANCIENT_COMPASS_NAME, () ->
+        new AncientCompassItem(new Item.Properties().rarity(Rarity.RARE).stacksTo(1).setNoRepair()));
 
     public Compass() {
         RegHelper.addItemsToTabsRegistration(Compass::addCreativeTabItems);
