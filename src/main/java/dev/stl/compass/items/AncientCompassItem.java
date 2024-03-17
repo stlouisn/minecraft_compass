@@ -1,7 +1,6 @@
 package dev.stl.compass.items;
 
 import com.mojang.datafixers.util.Pair;
-import java.util.function.Consumer;
 import net.minecraft.client.renderer.item.CompassItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.BlockPos;
@@ -23,6 +22,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 
+import java.util.function.Consumer;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
