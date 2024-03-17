@@ -64,6 +64,7 @@ dependencies {
     modImplementation("curse.maven:${project.moonlight_project_id}:${project.moonlight_forge_version}")
 
     modImplementation("curse.maven:${project.jei_project_id}:${project.jei_forge_version}")
+    modRuntimeOnly("curse.maven:${project.jei_project_id}:${project.jei_forge_version}")
 
     implementation("org.jetbrains:annotations:${project.jetbrains_version}")
 

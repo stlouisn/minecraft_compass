@@ -1,6 +1,7 @@
 package dev.stl.compass.integration.jei;
 
 import dev.stl.compass.Compass;
+import dev.stl.compass.registry.ModItems;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
@@ -23,7 +24,7 @@ public class JEIPlugin implements IModPlugin {
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
 
-        registration.addIngredientInfo(new ItemStack(Compass.ANCIENT_COMPASS_ITEM.get()), VanillaTypes.ITEM_STACK,
+        registration.addIngredientInfo(new ItemStack(ModItems.ANCIENT_COMPASS_ITEM.get()), VanillaTypes.ITEM_STACK,
                 Component.translatable("jei.info.ancient_compass"));
 
     }
