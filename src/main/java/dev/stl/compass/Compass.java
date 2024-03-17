@@ -19,6 +19,7 @@ public class Compass {
     public Compass() {
 
         ModItems.init();
+
         RegHelper.addItemsToTabsRegistration(CreativeTab::addCreativeTabItems);
 
     }
